@@ -25,12 +25,12 @@ class Pagination extends Component {
             })}
           >
             <span className="page-link" onClick={this.prevPage}>
-              Previous
+               Назад
             </span>
           </li>
           <li className="page-item">
             <span className="page-link" onClick={this.nextPage}>
-              Next
+              Вперед
             </span>
           </li>
         </ul>
