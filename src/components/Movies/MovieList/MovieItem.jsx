@@ -6,7 +6,7 @@ class MovieItem extends Component {
     return (
       <div className="card" style={{ width: "100%" }}>
         <img
-          className="card-img-top"
+          className="card-img-top card-img--height"
           src={`https://image.tmdb.org/t/p/w500${item.backdrop_path ||
             item.poster_path}`}
           alt=""
