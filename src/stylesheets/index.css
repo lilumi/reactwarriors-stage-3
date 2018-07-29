@@ -1,3 +1,17 @@
 .card-img--height {
   height: 195px;
   object-fit: cover; }
+
+.form-login-container {
+  display: flex;
+  align-items: center; }
+
+.form-login {
+  width: 100%;
+  padding: 15px; }
+
+.invalid-feedback {
+  display: block; }
+
+.form-control.invalid {
+  border-color: #dc3545; }

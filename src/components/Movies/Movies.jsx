@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Filters from "./Filters/Filters";
 import MovieList from "./MovieList/MovieList";
 import Pagination from "./Pagination";
+
 class Movies extends Component {
   constructor() {
     super();
@@ -45,25 +46,30 @@ class Movies extends Component {
   render() {
     const { filters, pagination } = this.state;
     return (
-      <div className="row mt-4">
-        <div className="col-4">
-          <div className="card" style={{ width: "100%" }}>
-            <div className="card-body">
-              <h2>Фильтры:</h2>
-              <Filters filters={filters} onChangeFilter={this.onChangeFilter} />
-              <Pagination
-                pagination={pagination}
-                onChangePagination={this.onChangePagination}
-              />
+      <div className="container">
+        <div className="row mt-4">
+          <div className="col-4">
+            <div className="card" style={{ width: "100%" }}>
+              <div className="card-body">
+                <h2>Фильтры:</h2>
+                <Filters
+                  filters={filters}
+                  onChangeFilter={this.onChangeFilter}
+                />
+                <Pagination
+                  pagination={pagination}
+                  onChangePagination={this.onChangePagination}
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-8">
-          <MovieList
-            filters={filters}
-            page={pagination.page}
-            onChangePagination={this.onChangePagination}
-          />
+          <div className="col-8">
+            <MovieList
+              filters={filters}
+              page={pagination.page}
+              onChangePagination={this.onChangePagination}
+            />
+          </div>
         </div>
       </div>
     );
